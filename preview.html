@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saldoo3 | Meme Creator</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #0f0f0f, #050505);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+nav h1 {
+    color: #00ffcc;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    color: #aaa;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 60px 20px;
+    background: #111;
+    animation: fadeIn 1.5s ease;
+}
+
+/* NEW GIF LOVE SECTION */
+.gif-love {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 2s ease;
+}
+
+.gif-love h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ffcc;
+}
+
+.gif-love p {
+    max-width: 700px;
+    margin: auto;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 60px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* GIF STYLE */
+.grid img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* HOVER EFFECT */
+.grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <h1>Saldoo3</h1>
+    <div>
+        <a href="#">Home</a>
+        <a href="#gallery">GIFs</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h2>Saldoo3</h2>
+    <p>Funny, chaotic, and relatable GIFs made for reactions, memes, and everyday moments.</p>
+</section>
+
+<section class="about">
+    <h3>About Me</h3>
+    <p>
+        I'm Saldoo3, a meme creator focused on expressive and funny GIFs.
+        I turn everyday moments into reactions people can use anywhere.
+    </p>
+</section>
+
+<!-- 🔥 NEW SECTION -->
+<section class="gif-love">
+    <h3>Why I Love GIFs</h3>
+    <p>
+        GIFs are one of the best ways to express emotion online. Sometimes words aren't enough,
+        and a perfect GIF says everything instantly. I love creating GIFs that people can relate to,
+        laugh at, and use in their everyday conversations.
+        <br><br>
+        For me, making GIFs is about capturing real reactions — the funny, awkward, chaotic moments
+        that everyone understands. That’s what makes them powerful and fun to share.
+    </p>
+</section>
+
+<section id="gallery" class="gallery">
+    <h3 style="text-align:center;">🔥 GIF Collection</h3>
+
+    <div class="grid">
+
+        <img src="gif1.gif"
+             onmouseover="this.src='gif2.gif'"
+             onmouseout="this.src='gif1.gif'">
+
+        <img src="gif2.gif"
+             onmouseover="this.src='gif3.gif'"
+             onmouseout="this.src='gif2.gif'">
+
+        <img src="gif3.gif"
+             onmouseover="this.src='gif4.gif'"
+             onmouseout="this.src='gif3.gif'">
+
+        <img src="gif4.gif"
+             onmouseover="this.src='gif5.gif'"
+             onmouseout="this.src='gif4.gif'">
+
+        <img src="gif5.gif"
+             onmouseover="this.src='gif1.gif'"
+             onmouseout="this.src='gif5.gif'">
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Saldoo3 | Meme Creator
+</footer>
+
+</body>
+</html>
